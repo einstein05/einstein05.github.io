@@ -1,0 +1,533 @@
+ /* Home Page */
+ 
+ body {
+            font-family : arial, sans-serif ;
+            background : grey ;
+            margin : 0 ;
+        }
+        
+        .image {
+            width : 60% ;
+            height : 30% ;
+            padding : 0 ;   
+            margin : 0 auto ;
+        }
+        
+        
+        .menu {
+            width : 60% ;
+            margin : 0 auto ;
+            background : black ;
+            overflow : auto ;
+        }
+        
+        .menu ul {
+            margin : 0 auto ;
+            padding : 0 ;
+         }
+        .menu ul li {
+            list-style : none ;
+            float : left ;
+            margin : 0 ;
+        }
+        
+        .menu ul li a {
+            text-decoration : none ;
+            display : block ;
+            color : grey ;
+            font-family : Arial ;
+            font-size : 18px ;
+            font-style : bold ;
+            text-align : center ;
+            width : 170px ;
+            padding : 10px ;
+            margin : 0 ;            
+        }
+        
+        .menu ul li a:hover {
+            background : white ;
+            color : black ;
+            font-weight : bold ;
+        }
+        
+        .greeting {
+            margin-top : 50px ;
+            margin-left : 5% ; 
+            width : 90% ;
+        }
+        
+        
+        .greeting p {
+            text-align : center ;
+            font-size : 30px ;
+            color : black ;
+        }
+       
+        .next {
+            width : 200px ;
+            float : right ;
+        }
+        
+        .next a {
+            text-decoration : none ;
+            font-size : 25px ;
+            color : black ;
+        }
+        
+        .next a:hover {
+            color : grey ;
+            background : black ;
+        }
+        
+         @media screen and (max-width:768px) {
+                       
+            .menu ul li {
+            float : none ;
+            }
+            
+            .menu ul li a {
+            font-size : 15px ;
+            width : 100% ;
+            padding : 3px 0 3px ;
+            margin : 0 ;
+            border-bottom : 1px solid white ; 
+            }
+            
+            .greeting {
+            margin-top : 50px ;
+            }
+            
+            .greeting p {
+            text-align : center ;
+            font-size : 20px ;
+            color : black ;
+            }
+            
+            .next a {
+            font-size : 20px ;
+            }
+        }
+
+/* About Me */
+
+html, body {
+            width : 100% ;
+            height : 100% ;
+            margin : 0 ;
+            background : grey ;
+            font-family : arial, sans-serif ;
+       }        
+        
+        #accordion {
+            width : 90% ;
+            margin : 5% ;
+        }
+   
+         label {
+            font-size : 30px ; 
+            cursor : pointer ;  
+       }
+        
+        .menu {
+            width : 100% ;
+            margin : 0 auto ;
+            background : black ;
+            overflow : auto ;
+        }
+        
+        .menu ul {
+            margin : 0 auto ;
+            padding : 0 ;
+         }
+        .menu ul li {
+            list-style : none ;
+            float : left ;
+            margin : 0 ;
+        }
+        
+        .menu ul li a {
+            text-decoration : none ;
+            display : block ;
+            color : grey ;
+            font-family : Arial ;
+            font-size : 20px ;
+            font-style : bold ;
+            text-align : center ;
+            width : 205px ;
+            padding : 20px ;
+            margin : 0 ;            
+        }
+        
+        .menu ul li a:hover {
+            background : white ;
+            color : black ;
+            font-weight : bold ;
+        }   
+        
+         .container {
+            display : none ;
+        }
+        
+         #toggle {
+            display : none ;
+        }
+        
+       
+         #toggle:checked + .container {
+                display : block ;
+        }
+        
+        #accordion h1 {
+           font-size : 40px ;
+        }
+        
+         #accordion section p {
+            display : none ;
+            font-size : 30px ; 
+            text-align : center ;
+        }
+        
+         #accordion section p span a {
+            font-size : 20px ; 
+            text-align : center ;
+            color : blue ;
+        }
+        
+        #accordion section a {
+            color : black ;
+            text-align : center ;
+            text-decoration : none ;
+        }
+        
+        #accordion section a:hover {
+            text-decoration : underline ;
+            
+        }
+        
+        #accordion section:target p {
+            display : block ;
+        }
+        
+        .nextprev {
+            margin : 5% ;
+        }
+        
+        .nextprev a {
+            margin-right : 75% ;
+            text-decoration : none ;
+            font-size : 25px ;
+            color : black ;
+        }
+        
+        .nextprev a:hover {
+            color : grey ;
+            background : black ;
+        }
+        
+        @media screen and (max-width:768px) {
+            
+            .menu ul li {
+                float : none ;
+            }
+            
+            .menu ul li a {
+                font-size : 15px ;
+                width : 100% ;
+                padding : 3px 0 3px ;
+                margin : 0 ;
+                border-bottom : 1px solid white ; 
+            }
+            
+            #accordion h1 {
+                   font-size : 30px ;
+                }    
+            
+            #accordion section p {
+                    font-size : 20px ; 
+                }
+            
+            .nextprev a {
+                    margin-right : 50% ;
+                    font-size : 20px ;
+                }
+        }
+
+/* Gallery */
+
+ * {
+            box-sizing : border-box ;
+        }
+
+        body {
+            font-family : arial, sans-serif ;
+            background : grey ;
+            margin : 0 ;
+        }	
+
+        .allOne {
+            width : 90% ;
+            margin : 5% ;
+            margin-bottom : 20px ;          
+        }
+        
+        .all {
+            width : 90% ;
+            margin : 5% ;
+            margin-top : 0 ;
+            background : #f2f2f2 ;
+            overflow : auto ;
+        }
+        
+       label {
+            font-size : 30px ; 
+            cursor : pointer ;  
+       }
+        
+        .menu {
+            width : 100% ;
+            margin : 0 auto ;
+            background : black ;
+            overflow : auto ;
+        }
+        
+        .menu ul {
+            margin : 0 auto ;
+            padding : 0 ;
+         }
+        .menu ul li {
+            list-style : none ;
+            float : left ;
+            margin : 0 ;
+        }
+        
+        .menu ul li a {
+            text-decoration : none ;
+            display : block ;
+            color : grey ;
+            font-family : Arial ;
+            font-size : 20px ;
+            font-style : bold ;
+            text-align : center ;
+            width : 205px ;
+            padding : 20px ;
+            margin : 0 ;            
+        }
+        
+        .menu ul li a:hover {
+            background : white ;
+            color : black ;
+            font-weight : bold ;
+        }   
+        
+         .container {
+            display : none ;
+        }
+        
+         #toggle {
+            display : none ;
+        }
+        
+       
+         #toggle:checked + .container {
+                display : block ;
+        }
+        
+        .gallery {
+            width : 30% ;
+            margin : 1.5% ;
+            border : 1px solid #ccc ;
+            float : left ;
+            box-sizing : border-box ;
+        }	
+
+        .gallery img {
+            width : 100% ;
+            height : auto ;
+        }
+
+        .desc {
+            padding : 10px ;
+            text-align : center ;
+        }
+
+        footer {
+            padding : 10px ;
+            font-size : 17px ;
+            font-weight : bold ;
+            text-align : center ;
+            background : #594848 ;
+            color : white ;
+            font-family : Arial ;
+            letter-spacing : 1px ;
+        }
+        
+        @media only screen and (max-width:768px) {
+      
+            .menu ul li {
+                float : none ;
+            }
+            
+            .menu ul li a {
+                font-size : 15px ;
+                width : 100% ;
+                padding : 3px 0 3px ;
+                margin : 0 ;
+                border-bottom : 1px solid white ; 
+            }
+            
+            .gallery {
+                width : 45% ;
+                margin : 2.5% ;
+                border : 1px solid #ccc ;
+                float : left ;
+            }	
+        }
+
+/* Contact */
+
+html, body {
+            width : 100% ;
+            height : 100% ;
+            margin : 0 ;
+            background : grey ;
+            font-family : arial, sans-serif ;
+       }
+        
+        .contact {
+            width : 90% ;
+            margin : 5% ;
+        }
+       
+         label {
+            font-size : 30px ; 
+            cursor : pointer ;  
+       }
+        
+        .menu {
+            width : 100% ;
+            margin : 0 auto ;
+            background : black ;
+            overflow : auto ;
+        }
+        
+        .menu ul {
+            margin : 0 auto ;
+            padding : 0 ;
+         }
+        .menu ul li {
+            list-style : none ;
+            float : left ;
+            margin : 0 ;
+        }
+        
+        .menu ul li a {
+            text-decoration : none ;
+            display : block ;
+            color : grey ;
+            font-family : Arial ;
+            font-size : 20px ;
+            font-style : bold ;
+            text-align : center ;
+            width : 205px ;
+            padding : 20px ;
+            margin : 0 ;            
+        }
+        
+        .menu ul li a:hover {
+            background : white ;
+            color : black ;
+            font-weight : bold ;
+        }   
+        
+         .container {
+            display : none ;
+        }
+        
+         #toggle {
+            display : none ;
+        }
+        
+       
+         #toggle:checked + .container {
+                display : block ;
+        }
+        
+        
+        .getintouch {
+            text-align : center ;
+        }
+        
+        .getintouch h1 {
+            font-size : 40px ;
+        }
+        
+        .getintouch p {
+            font-size : 30px ;
+        }
+        
+        .getintouch ul li {
+            margin : 0 ;
+            padding : 0 ; 
+            font-size : 25px ;
+            color : blue ;
+            list-style-position: inside ;
+            text-align : center ;
+            list-style-type : square ;
+        }
+        
+         .nextprev {
+            margin : 5% ;
+        }
+        
+        .nextprev a {
+            margin-right : 75% ;
+            text-decoration : none ;
+            font-size : 25px ;
+            color : black ;
+        }
+        
+        .nextprev a:hover {
+            color : grey ;
+            background : black ;
+        }
+        
+        @media screen and (max-width:768px) {
+            
+            .menu ul li {
+                float : none ;
+            }
+            
+            .menu ul li a {
+                font-size : 15px ;
+                width : 100% ;
+                padding : 3px 0 3px ;
+                margin : 0 ;
+                border-bottom : 1px solid white ; 
+            }
+            
+            .getintouch h1 {
+                font-size : 30px ;
+            }
+
+            .getintouch p {
+                font-size : 20px ;
+            }
+            
+            .getintouch ul li {
+                font-size : 20px ;
+            }
+            
+            .nextprev a {
+                margin-right : 50% ;
+                font-size : 20px ;
+            }
+        }
+
+
+
+
+
+
+
+
+

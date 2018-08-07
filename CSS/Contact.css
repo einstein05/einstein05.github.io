@@ -1,0 +1,137 @@
+html, body {
+            width : 100% ;
+            height : 100% ;
+            margin : 0 ;
+            background : grey ;
+            font-family : arial, sans-serif ;
+       }
+        
+        .contact {
+            width : 90% ;
+            margin : 5% ;
+        }
+       
+         label {
+            font-size : 30px ; 
+            cursor : pointer ;  
+       }
+        
+        .menu {
+            width : 100% ;
+            margin : 0 auto ;
+            background : black ;
+            overflow : auto ;
+        }
+        
+        .menu ul {
+            margin : 0 auto ;
+            padding : 0 ;
+         }
+        .menu ul li {
+            list-style : none ;
+            float : left ;
+            margin : 0 ;
+        }
+        
+        .menu ul li a {
+            text-decoration : none ;
+            display : block ;
+            color : grey ;
+            font-family : Arial ;
+            font-size : 20px ;
+            font-style : bold ;
+            text-align : center ;
+            width : 205px ;
+            padding : 20px ;
+            margin : 0 ;            
+        }
+        
+        .menu ul li a:hover {
+            background : white ;
+            color : black ;
+            font-weight : bold ;
+        }   
+        
+         .container {
+            display : none ;
+        }
+        
+         #toggle {
+            display : none ;
+        }
+        
+       
+         #toggle:checked + .container {
+                display : block ;
+        }
+        
+        
+        .getintouch {
+            text-align : center ;
+        }
+        
+        .getintouch h1 {
+            font-size : 40px ;
+        }
+        
+        .getintouch p {
+            font-size : 30px ;
+        }
+        
+        .getintouch ul li {
+            margin : 0 ;
+            padding : 0 ; 
+            font-size : 25px ;
+            color : blue ;
+            list-style-position: inside ;
+            text-align : center ;
+            list-style-type : square ;
+        }
+        
+         .nextprev {
+            margin : 5% ;
+        }
+        
+        .nextprev a {
+            margin-right : 75% ;
+            text-decoration : none ;
+            font-size : 25px ;
+            color : black ;
+        }
+        
+        .nextprev a:hover {
+            color : grey ;
+            background : black ;
+        }
+        
+        @media screen and (max-width:768px) {
+            
+            .menu ul li {
+                float : none ;
+            }
+            
+            .menu ul li a {
+                font-size : 15px ;
+                width : 100% ;
+                padding : 3px 0 3px ;
+                margin : 0 ;
+                border-bottom : 1px solid white ; 
+            }
+            
+            .getintouch h1 {
+                font-size : 30px ;
+            }
+
+            .getintouch p {
+                font-size : 20px ;
+            }
+            
+            .getintouch ul li {
+                font-size : 20px ;
+            }
+            
+            .nextprev a {
+                margin-right : 50% ;
+                font-size : 20px ;
+            }
+        }
