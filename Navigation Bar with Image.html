@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Navigation Bar with Image </title>
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css"> 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 	<style>
         body {
             background : green ;
@@ -30,6 +32,11 @@
             margin : 0 auto ;
             background : #333 ;
             overflow : auto ;
+            display : none ;
+        }
+        
+        .menu.active {
+            display : block ;
         }
         
         .menu ul {
@@ -40,6 +47,7 @@
             list-style : none ;
             float : left ;
             margin : 0 ;
+            padding : 0 ;
         }
         
         .menu ul li a {
@@ -48,8 +56,7 @@
             color : white ;
             font-family : Arial ;
             font-size : 17px ;
-            text-align : center ;
-            width : 105px ;
+            text-align : center ;            
             padding : 10px ;
             margin : 0 ;            
         }
@@ -60,19 +67,64 @@
             font-weight : bold ;
         }
         
+        .fa {
+            width : 50px ;
+            height : 50px ;
+            font-size : 25px ; 
+            padding : 10px 5px ;
+            text-align : center ;
+            cursor : pointer ;  
+            color : #fff ;
+            border-radius : 50% ;
+            background : #333 ;
+            margin-top : 150px ;
+            
+       }
+        
+     
+        .menu-icon {
+            margin : 0 auto ;
+            width : 50px ;
+            height : 50px ;
+            padding : 8px 8px ;
+            background : #333 ;
+            box-sizing : border-box ;
+            cursor : pointer ;
+            border-radius : 50% ;
+            margin-top : 150px ;
+           
+        }
+        
+        .menu-icon span {
+            width : 100% ;
+            height : 3px ;
+            display : block ;
+            background : #fff ;
+            margin : 6px 0 ;
+            transition : .5s ;
+        }
        
         @media screen and (max-width:768px) {
-                       
-            .menu ul li {
-            float : none ;
-            }
+             
+        .image {
+            width : 80% ;
+        }
             
-            .menu ul li a {
-            font-size : 15px ;
-            width : 100% ;
-            padding : 3px 0 3px ;
-            border-bottom : 1px solid white ; 
-            }
+        .menu {
+            width : 80% ;
+        }
+            
+        .menu ul li a {
+            font-size : 15px ;           
+            padding : 2px 0 2px ;
+            border : 1px solid black ;
+         }
+        
+         .fa {
+            font-size : 25px ; 
+            margin-top : 100px ;            
+            }    
+            
         }
         
     </style>
@@ -84,15 +136,33 @@
     </div>
     
     <div class="menu">
-                <ul>
-                    <li> <a href="#"> NATURE </a> </li>
-                    <li> <a href="#"> MOUNTAIN </a> </li>
-                    <li> <a href="#"> GRASS </a> </li>
-                    <li> <a href="#"> TREE </a> </li>
-                    <li> <a href="#"> STORM </a> </li>
-                    <li> <a href="#"> TRAIL </a> </li>                            
+                <ul class="row">
+                    <li class="col-xs-4 col-sm-2 col-md-2"> <a href="#"> NATURE </a> </li>
+                    <li class="col-xs-4 col-sm-2 col-md-2"> <a href="#"> MOUNTAIN </a> </li>
+                    <li class="col-xs-4 col-sm-2 col-md-2"> <a href="#"> GRASS </a> </li>
+                    <li class="col-xs-4 col-sm-2 col-md-2"> <a href="#"> TREE </a> </li>
+                    <li class="col-xs-4 col-sm-2 col-md-2"> <a href="#"> STORM </a> </li>
+                    <li class="col-xs-4 col-sm-2 col-md-2"> <a href="#"> TRAIL </a> </li>                            
                  </ul>      
     </div>
+    
+    
+        <div class="menu-icon">           
+                <span> </span> 
+                <span> </span> 
+                <span> </span>            
+        </div>        
+    
+    
+    <script src="JS/jquery-3.3.1.min.js">  </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-icon').click(function(){
+                $('.menu').slideToggle('slow').toggleClass('active');
+            });
+        });
+      
+    </script>
    
         
 </body>

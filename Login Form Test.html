@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Login Form Test </title>
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">   	
+</head>
+
+<style>
+    .error {
+        border : 1px solid #000 ;
+        background-color : #999 ;
+        text-align : center ;
+        font-style : 15px ;
+        display : none ;
+    }
+    
+</style>
+    
+
+<body>
+   
+        <form> 
+            <p> Pseudo </p>
+            <input type="text" name="" id="pseudo" placeholder="Enter Username"> <span class="error"> </span>
+            <p> Password </p>
+            <input type="password" name="" id="password" placeholder="Enter Password"> <span class="error"> </span> <br/> <br/> 
+            <input type="submit" name="" id="submit" value="Login" > <br/> <br/>  
+            <a href="#"> Lost your password ? </a> <br/>
+            <a href="#"> Don't have an account ? </a>        
+        </form>        
+       
+    <script type="text/javascript" src="JS/jquery-3.3.1.min.js">  </script>
+    <script>
+        $(document).ready(function(){
+            var result=true ;
+           $('form').submit(function(){
+                if($('#pseudo').val()==""){
+                    $('#pseudo').css('border-color','#ff0000');
+                    $('#pseudo').next('.error').fadeIn('fast').text('Champ Obligatoire');
+                    result=false ;
+                }
+                 if($('#password').val()==""){
+                    $('#password').css('border-color','#ff0000');
+                    $('#password').next('.error').fadeIn('fast').text('Champ Obligatoire');
+                    result=false ;
+                }
+                return result ;
+                    
+            });
+        });
+        
+        
+    </script>
+    
+    
+</body>
+
+</html>

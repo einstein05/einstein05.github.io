@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title> Simple Login Form </title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
     <style>
         body {
             margin : 0 ;
@@ -19,10 +20,10 @@
 
         .loginbox {
             position : absolute ;
-            top : 50% ;
-            left : 50% ;
-            transform : translate(-50%, -50%) ;
-            width : 350px ;
+            margin-top : 200px ;
+            margin-left : 35% ;
+            width : 30% ;
+            height : auto ;
             box-sizing : border-box ;
             background : transparent ;
             box-shadow : 0 10px 20px rgba(0,0,0,.5) ;
@@ -32,7 +33,7 @@
 
         .loginbox:hover {
             box-shadow : 0 10px 20px rgba(0,0,0,0) ;
-            background : rgba(255,255,255,1) ;
+            background : skyblue ;
         }
 
         .glass {
@@ -45,11 +46,7 @@
             transition : .5s ;
         }
 
-        .glass:hover {
-            transform : translate(20px,20px) ;
-            box-shadow : 0 10px 20px rgba(0,0,0,.5) ;
-        }
-
+       
         .avatar {
             margin : 0 auto ;
             display : block ;
@@ -97,6 +94,16 @@
             top : 10px ;
             color : #262626 ;    
         }
+        
+        .inputbox .error {
+            font-size : 16px ;
+            font-weight : bold ;
+            color : #fff ;
+            text-align : center ;
+            display : none ;
+            top : 35px ;
+        }
+
 
         .loginbox input[type="submit"] {
             border : none ;
@@ -120,9 +127,15 @@
 @media(max-width:768px) {
     
    
+    html {
+        height : 100% ;
+    }
+    
     .loginbox {
-        width : 280px ;
-        height : auto ;       
+        width : 80% ;
+        margin-left : 10% ;
+        margin-top : 50px ;
+        margin-bottom : 100px ;
     } 
     
     .avatar {
@@ -140,25 +153,76 @@
 </head>
 
 <body>
-    <div class="loginbox">
+    <div class="loginbox animated bounceInRight">
         <div class="glass">
             <img src="Images/avatar%202.jpg" class="avatar">
             <h3> Sign in Here </h3>
             <form>
                 <div class="inputbox">
-                    <input type="text" name="" placeholder="Username">
-                    <span> <i class="fas fa-user"></i> </span>
+                    <input type="text" id="username" name="" placeholder="Username">
+                    <span class="error"> </span> <span> <i class="fa fa-user"></i> </span> 
                 </div>
                 <div class="inputbox">
-                    <input type="password" name="" placeholder="Password">
-                    <span> <i class="fas fa-unlock-alt"></i> </span>
+                    <input type="password" id="password" name="" placeholder="Password">
+                    <span class="error"> </span> <span> <i class="fa fa-unlock-alt"></i> </span> 
                 </div>
                 <input type="submit" name="" value="Login">
             </form>
                 <a href="#">  Forget Password ? </a>            
         </div>
                 
-    </div>       
+    </div>    
+    
+    <script src="JS/jquery-3.3.1.min.js">  </script>
+    <script>
+        $(document).ready(function(){
+            var result=true ;
+            $('form').submit(function(){
+                if($('#username').val()==""){
+                    $('#username').css('border-color','#ff0000');
+                    $('#username').next('.error').fadeIn('fast').text('This field is compulsory !');
+                    result=false ;
+                }
+                 if($('#password').val()==""){
+                    $('#password').css('border-color','#ff0000');
+                    $('#password').next('.error').fadeIn('fast').text('This field is compulsory !');
+                    result=false ;
+                }
+                return result ;
+                    
+            });
+            
+            $('#username').keyup(function(){
+                if($('#username').val().length<4){
+                    $('#username').css('border-color','#ff0000');
+                    $('#username').next('.error').fadeIn('fast').text('The username should have at least 4 characters');
+                    result=false ;
+                }
+                else{
+                    $('#username').css('border-color','#00ff00');
+                    $('#username').next('.error').fadeOut();
+                    result=true ;
+                }
+                return result ;
+            });
+            
+            $('#password').keyup(function(){
+                if($('#password').val().length<4){
+                    $('#password').css('border-color','#ff0000');
+                    $('#password').next('.error').fadeIn('fast').text('The password should have at least 4 characters');
+                    result=false ;
+                }
+                else{
+                    $('#password').css('border-color','#00ff00');
+                    $('#password').next('.error').fadeOut();
+                    result=true ;
+                }
+                return result ;
+            });
+        });
+        
+        
+    </script>
           
         
 </body>
